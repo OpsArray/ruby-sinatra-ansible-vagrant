@@ -1,0 +1,20 @@
+[submodule "roles/common"]
+	path = roles/common
+	url = git@github.com:timmahoney/common-ansible-role.git
+	branch = master
+	ignore = all
+[submodule "roles/firewall"]
+	path = roles/firewall
+	url = git@github.com:timmahoney/firewall-ansible-role.git
+	branch = master
+	ignore = all
+[submodule "roles/hosts"]
+	path = roles/hosts
+	url = git@github.com:timmahoney/hosts-ansible-role.git
+	branch = master
+	ignore = all
+[submodule "roles/users"]
+	path = roles/users
+	url = git@github.com:timmahoney/users-ansible-role.git
+	branch = master
+	ignore = all
