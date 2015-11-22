@@ -1,0 +1,7 @@
+---
+
+firewalld_allow:
+-
+  port: 80/tcp
+-
+  port: 443/tcp
