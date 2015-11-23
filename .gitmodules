@@ -18,3 +18,13 @@
 	url = git@github.com:timmahoney/users-ansible-role.git
 	branch = master
 	ignore = all
+[submodule "roles/rvm"]
+	path = roles/rvm
+	url = git@github.com:timmahoney/rvm-ansible-role.git
+	branch = master
+	ignore = all
+[submodule "roles/nginx"]
+	path = roles/nginx
+	url = git@github.com:timmahoney/nginx-ansible-role.git
+	branch = master
+	ignore = all

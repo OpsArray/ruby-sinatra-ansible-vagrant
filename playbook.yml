@@ -6,3 +6,5 @@
   - firewall
   - users
   - hosts
+  - rvm
+  - nginx
