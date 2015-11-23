@@ -14,8 +14,6 @@ rvm1_temp_download_path: '/tmp'
 rvm1_install_path: '/home/vagrant/.rvm'
 rvm_install_gems:
 - sinatra
-- unicorn
-
 
 ### NGINX
 nginx_permissions:

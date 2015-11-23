@@ -2,6 +2,8 @@
 # vi: set ft=ruby :
 
 VAGRANTFILE_API_VERSION = "2"
+ansible_tags = ENV['TAGS'] || 'all'
+application_directory = ENV['APP_DIR']
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
@@ -35,11 +37,16 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define :sinatra do |sinatra|
   end
 
+  if application_directory != nil
+    config.vm.synced_folder "#{application_directory}", "/var/www/html/production", :mount_options => [ 'dmode=775', 'fmode=775']
+  end
+
   # Ansible provisioner.
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "playbook.yml"
     ansible.inventory_path = "inventory"
     ansible.limit = "app"
+    ansible.tags = "#{ansible_tags}"
     # Having trouble? Uncomment below to troubleshoot.
     # ansible.verbose = "vvvv"
   end
