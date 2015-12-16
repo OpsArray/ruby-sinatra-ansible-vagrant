@@ -28,3 +28,8 @@
 	url = git@github.com:timmahoney/nginx-ansible-role.git
 	branch = master
 	ignore = all
+[submodule "roles/unicorn"]
+	path = roles/unicorn
+	url = git@github.com:timmahoney/unicorn-ansible-role.git
+	branch = master
+	ignore = all
